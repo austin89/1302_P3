@@ -4,7 +4,7 @@ import javax.swing.event.*;
 
 public class Slider extends JPanel{
 	private JSlider slider;
-	private JLabel label;
+	private JLabel label, label1, label2, label3, levelLabel, space, space1;
 	private JPanel panel;
 	
 	public Slider(){
@@ -18,8 +18,18 @@ public class Slider extends JPanel{
 		SliderListener listener = new SliderListener();
 		slider.addChangeListener(listener);
 		
-		label = new JLabel("Slide to Change Level.\nCurrent Level: Easy");
+		label = new JLabel("Slide to Change Level.");
 		label.setAlignmentX (Component.CENTER_ALIGNMENT);
+		space = new JLabel("\n");
+		label1 = new JLabel("1 = Easy");
+		label1.setAlignmentX (Component.CENTER_ALIGNMENT);
+		label2 = new JLabel("2 = Medium");
+		label2.setAlignmentX (Component.CENTER_ALIGNMENT);
+		label3 = new JLabel("3 = Difficult");
+		label3.setAlignmentX (Component.CENTER_ALIGNMENT);
+		space1 = new JLabel("\n");
+		levelLabel = new JLabel("Current Level: Easy");
+		levelLabel.setAlignmentX (Component.CENTER_ALIGNMENT);
 		
 		panel = new JPanel();
 		BoxLayout layout = new BoxLayout(panel, BoxLayout.Y_AXIS);
@@ -27,9 +37,15 @@ public class Slider extends JPanel{
 		
 		Button pushButton = new Button();
 		
-		panel.add(pushButton);
 		panel.add(label);
+		panel.add(space);
+		panel.add(label1);
+		panel.add(label2);
+		panel.add(label3);
+		panel.add(space1);
+		panel.add(levelLabel);
 		panel.add(slider);
+		panel.add(pushButton);
 		
 		add(panel);
 		
@@ -47,37 +63,18 @@ public class Slider extends JPanel{
 			
 			if(level == 1){
 				showLevel = "Easy";
-				label.setText("Slide to Change Level.\nCurrent Level: " + showLevel);
+				levelLabel.setText("Current Level: " + showLevel);
 			}
 			else if(level == 2){
 				showLevel = "Medium";
-				label.setText("Slide to Change Level.\nCurrent Level: " + showLevel);
+				levelLabel.setText("Current Level: " + showLevel);
 			}
 			if(level == 3){
 				showLevel = "Hard";
-				label.setText("Slide to Change Level.\nCurrent Level: " + showLevel);
+				levelLabel.setText("Current Level: " + showLevel);
 			}
 			
 		}
-/*
-		public void addChangeListener(SliderListener listener) {
-			level = slider.getValue();
-			
-			if(level == 1){
-				showLevel = "Easy";
-				label.setText("Level: " + showLevel);
-			}
-			else if(level == 2){
-				showLevel = "Medium";
-				label.setText("Level: " + showLevel);
-			}
-			if(level == 3){
-				showLevel = "Hard";
-				label.setText("Level: " + showLevel);
-			}
-			
-		}
-*/		
 		
 	}
 
