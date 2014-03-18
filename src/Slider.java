@@ -52,6 +52,7 @@ public class Slider extends JPanel{
 		//setBackground(Color.LIGHT_GRAY);
 
 	}
+<<<<<<< HEAD
 	
 	public void remove(){
 		panel.remove(label);
@@ -64,6 +65,8 @@ public class Slider extends JPanel{
 		panel.remove(slider);
 		remove(panel);
 	}
+=======
+>>>>>>> FETCH_HEAD
 
 	private class SliderListener implements ChangeListener{
 		private int level;
