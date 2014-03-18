@@ -29,12 +29,12 @@ public class Countdown extends JPanel{
 		usedBeforePanel = new JPanel(new BorderLayout());
 		usedBeforePanel.setBackground(Color.LIGHT_GRAY);
 		usedBeforePanel.add(new JLabel("Used Before", SwingConstants.CENTER));
-		
-		
+
+
 		setLayout(cardLayout);
 		add(introPanel, INTRO);
 		add(usedBeforePanel, USED_BEFORE);
-		
+
 		//GameFrame game = new GameFrame();		//if uncommented, two windows with shapes will come up
 
 		new HurdlerTimer(this).start();
@@ -49,8 +49,8 @@ public class Countdown extends JPanel{
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 	}
-	
-	
+
+
 	public void setCountDownLabelText(String text) {
 		countDownLabel.setText(text);
 	}

@@ -1,7 +1,6 @@
 import javax.swing.JPanel;
 import java.util.*;
 
-
 public class Coordinates extends JPanel{
 	
 	Random r = new Random();
