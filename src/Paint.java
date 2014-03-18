@@ -21,11 +21,11 @@ public class Paint extends JPanel{
 	}
 	
 	public int setX(){
-		return width.nextInt(400);
+		return width.nextInt(250);
 	}
 	
 	public int setY(){
-		return height.nextInt(600);
+		return height.nextInt(250);
 	}
 	
 	public int getWidth(){
