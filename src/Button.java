@@ -39,6 +39,11 @@ public class Button extends JPanel{
 		public void actionPerformed(ActionEvent e) {
 			Countdown timer = new Countdown();		//creates a new Countdown object
 			timer.createAndShowUI();				//displays the countdown timer (but still in a separate window)
+			
+			//GameFrame game = new GameFrame();
+			//game.showGame();
+			
+			frame.setVisible(true);
 		}
 	}
 

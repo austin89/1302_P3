@@ -21,11 +21,11 @@ public class Paint extends JPanel{
 	}
 	
 	public int setX(){
-		return width.nextInt(350);
+		return width.nextInt(400);
 	}
 	
 	public int setY(){
-		return height.nextInt(700);
+		return height.nextInt(600);
 	}
 	
 	public int getWidth(){
@@ -34,14 +34,6 @@ public class Paint extends JPanel{
 	
 	public int getHeight(){
 		return r.nextInt(50);
-	}
-	
-	public void drawRectangle(){
-		Graphics2D g2 = (Graphics2D) g;
-		g2.draw((Shape) new Rectangle2D.Double(setX(), setY(),
-                getWidth(),
-                getHeight()));
-		g2.fill
 	}
 
 }

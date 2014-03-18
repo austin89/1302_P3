@@ -29,32 +29,27 @@ public class Countdown extends JPanel{
 		usedBeforePanel = new JPanel(new BorderLayout());
 		usedBeforePanel.setBackground(Color.LIGHT_GRAY);
 		usedBeforePanel.add(new JLabel("Used Before", SwingConstants.CENTER));
-
+		
+		
 		setLayout(cardLayout);
 		add(introPanel, INTRO);
 		add(usedBeforePanel, USED_BEFORE);
+		
+		//GameFrame game = new GameFrame();		//if uncommented, two windows with shapes will come up
 
 		new HurdlerTimer(this).start();
 	}
 
 	public void createAndShowUI() {
 		JFrame frame = new JFrame("Countdown");
-		frame.getContentPane().add(new Countdown());
+		frame.getContentPane().add(new Countdown());	//makes the countdown window come up, but separately
+		GameFrame.showGame();							//makes the window with the shapes pull up, but separately
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 	}
 	
-/*
-	public static void main(String[] args) {
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				createAndShowUI();
-			}
-		});
-	}
-*/
 	
 	public void setCountDownLabelText(String text) {
 		countDownLabel.setText(text);
